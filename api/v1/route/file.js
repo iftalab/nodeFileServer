@@ -87,7 +87,7 @@ router.post('/', upload.single('file'), function (req, res, next) {
     });
     file.save()
         .then(result => {
-            res.status(200).json(result)
+            res.status(201).json(result)
         }).catch(err => {
             res.status(500).json({ error: err })
         });

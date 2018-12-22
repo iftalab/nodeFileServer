@@ -75,5 +75,8 @@ app.use(function (err, req, res, next) {
         }
     });
 });
-
+var http = require('http');
+setInterval(function() {
+    http.get("http://stfs-temp.herokuapp.com");
+}, 1200000); // every 20 minutes (1200000)
 module.exports = app;
